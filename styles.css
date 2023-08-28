@@ -1,0 +1,598 @@
+:root {
+  /* font-size of the nav bar  */
+  --nav-font-size: 2.5em;
+}
+
+body {
+  overflow-x: hidden;
+}
+/* universal selector */
+
+* {
+  /* selecting all the element inside body tag to have a margin of 0 */
+  /* this will get rid of the default margin of all the elements  */
+  /* so that we can apply our own styling and margin when needed as necessary */
+  margin: 0;
+  /* selecting all the element inside body tag to have a paddig of 0 */
+  /* this will get rid of the default padding of all the elements  */
+  /* so that we can apply our own styling and padding when needed as necessary */
+  padding: 0;
+  /* The box-sizing property allows us to include the padding and border in an element's 
+  total width and height */
+  /* remove this and see the effect */
+  box-sizing: border-box;
+  /* making every element cursor to pointer */
+  cursor: pointer;
+}
+/* the nav bar height */
+.nav {
+  /* making the height auto so that it can take the size accordingly to the content */
+  height: auto;
+  /* making it flex so that all the elements inside the nav appears in a row */
+  /* as all the elements inside nav div are block level elements */
+  display: flex;
+  font-size: var(--nav-font-size);
+  justify-content: space-evenly;
+  /* make the width of the nav be 100% */
+  width: 100%;
+}
+
+/* targeting the linked in logo using child selector */
+.nav > .search > .fa-linkedin,
+.suggestion > .fa-linkedin,
+.suggestion > .fa-facebook,
+.suggestion > .fa-twitter {
+  /* changing the color of the logo to a hex value */
+  color: #0a66c2;
+}
+/* the search input bar  */
+.search {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  font-size: 100%;
+  gap: 1vw;
+}
+/* the input box inside the .search div tag */
+.search > input {
+  height: calc(var(--nav-font-size));
+  width: 70%;
+  padding: 1vw;
+  font-size: 32%;
+  border: none;
+  background-color: #edf3f8;
+  text-align: center;
+}
+.search > input::placeholder {
+  text-align: right;
+}
+
+/* when focus the over the input */
+.search > input:focus {
+  width: 100%;
+  transition: all 1s;
+}
+
+.search > .fa-magnifying-glass {
+  font-size: 50%;
+  position: absolute;
+  left: 160px;
+}
+/* the links like home and mynetwork etc */
+.navigation-menu {
+  display: flex;
+  width: 40%;
+}
+/* using general sibling selector to select all the sibling of div with the name of class home*/
+.navigation-menu > .home ~ div {
+  color: #666666;
+}
+/* all the div inside the navigation menu */
+.navigation-menu > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 60%;
+  text-align: center;
+  justify-content: center;
+  width: 33.3%;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+/* the span tag inside the navigation menu  */
+.navigation-menu span {
+  /* make the font size to be 60%. */
+  font-size: 50%;
+}
+/* the down symbol in the profile nav tag */
+.profile .fa-caret-down {
+  font-size: 80%;
+  padding: 0;
+}
+/* the link Try Premium for free one */
+.nav a {
+  font-size: 0.3em;
+  width: calc(100px + 1vw);
+  display: flex;
+  align-items: center;
+  color: orange;
+  text-align: center;
+}
+/* on hover on Try premium for free  */
+.nav a:hover {
+  color: #5c3b09;
+}
+/* NavBar styling completed */
+
+/*main body */
+.main-body {
+  width: 100vw;
+  /* setting the height of the main-body to be only the max-content */
+  height: max-content;
+  /* using flexbox */
+  display: flex;
+  /* making the all the three divs left,right and middle panel to have some gap between them */
+  justify-content: space-between;
+  background-color: #f3f2f0;
+  padding: 2vw;
+}
+
+/* this style is for the left-panel div  */
+.main-body > .left-panel {
+  width: 18.5%;
+  height: 100%;
+  background-color: transparent;
+  /* making th font-size to 3.2em , 1em = 16px */
+  font-size: 3.2em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* used row gap so that child divs are separated  */
+  /* like the user-info div and the recent-activity div */
+  row-gap: 1rem;
+}
+.left-panel > .user-info {
+  height: 60%;
+}
+.left-panel > .recent-activity {
+  height: 40%;
+  background-color: white;
+  font-size: 30%;
+  border-radius: 10px;
+}
+.user-info > .top-box {
+  background-color: #a0b4b7;
+  border-radius: 10px;
+  height: 50%;
+  text-align: center;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+.top-box > .top-portion {
+  height: 50%;
+  padding: 1vw;
+}
+
+.top-portion > img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+/* .top-portion > i {
+  font-size: 80%;
+  border: 8px solid #f5f7f9;
+  background-color: #f5f7f9;
+  padding: 0.9vw;
+  border-radius: 50%;
+} */
+/* top-box div which consists of text like welcome shoaeeb */
+.top-box > .bottom-portion {
+  background-color: white;
+  height: 50%;
+  text-align: center;
+  font-size: 25%;
+  padding: 1vw;
+}
+/* welcome shoaeeb to make it underline when hover */
+.top-box > .bottom-portion > h2:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Box Div contains the connections text */
+.user-info > .bottom-box {
+  font-size: 30%;
+  padding: 1vw;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* adding some  styles to connections div */
+/* and the  conncetions div childs like the paragraph tag and so on */
+.bottom-box > .connections,
+.bottom-box > .exclusive {
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.connections > p,
+.exclusive > p,
+.items > p {
+  padding: 3px;
+}
+.connections > p {
+  display: flex;
+  justify-content: space-between;
+}
+/* recent activity div  */
+.recent-activity > .recent-text,
+.right-panel h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.recent-activity > p {
+  padding: 0 0 0 10px;
+}
+.recent-activity .fa-hashtag {
+  font-size: 80%;
+  padding-right: 5px;
+}
+.recent-activity .india,
+.see-all {
+  color: #7a7979;
+}
+/* .recent-activity > .recent {
+  padding: 0 0 10px 10px;
+} */
+
+.recent-activity > .links {
+  padding: 10px 0 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-activity > .recent:hover,
+.see-all:hover {
+  background-color: #bfbfbf;
+}
+
+.recent-activity > .discover-more {
+  margin-top: 10px;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #bfbfbf;
+}
+/* left panel styles completed */
+
+/* the Styling of the middle panel */
+.main-body > .middle-panel {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  /* border-radius: 10px;
+  overflow: hidden; */
+}
+/* Styling of the right panel */
+.main-body > .right-panel {
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* Styling of the right panel childs div  */
+/*  div linkedin-news   */
+.right-panel > .linkedin-news,
+.right-panel > .profile-suggestions {
+  height: max-content;
+  background-color: White;
+  border-radius: 10px;
+}
+/* The heading LinkedIn news */
+.linkedin-news h3,
+.profile-suggestions h3 {
+  padding-left: 10px;
+}
+.show-more {
+  color: #bfbfbf;
+}
+
+.show-more > p {
+  padding-left: 25px;
+}
+/* heading div consists of two things  */
+/* the heading h3 which says LinkedIn news and Info icon */
+.linkedin-news > .heading,
+.profile-suggestions > .heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.heading > .fa-info {
+  margin-right: 10px;
+  padding: 2.5px;
+  align-self: center;
+  background-color: black;
+  color: white;
+}
+
+.linkedin-news > .news > .box {
+  padding: 0 0 10px 10px;
+  width: 90%;
+  margin: 0 auto 0 auto;
+  display: list-item;
+}
+/* Styling of .suggestions div inside the Profile-suggestions div */
+.suggestions {
+  display: flex;
+  flex-direction: column;
+}
+.suggestion {
+  display: flex;
+  padding: 5px 0 8px 10px;
+  gap: 5px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.actions .follow {
+  border: 1px solid #bfbfbf;
+  padding: 5px 10px 5px 10px;
+  border-radius: 25px;
+}
+.actions .follow:hover {
+  background-color: #929191;
+}
+/* this the hover effect of each new section */
+/* in the linkedin news  */
+.box:hover {
+  background-color: #bfbfbf;
+}
+
+/* Styling of the child divs inside the middle panel*/
+
+/* the styling of the post section div */
+.middle-panel > .post {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+}
+/* write-something div consist of the profile image and the input */
+.write-something {
+  /* used display flex to have some gap between the profile image and the input field */
+  display: flex;
+
+  gap: 13px;
+}
+/* styling the input field inside the write something div */
+.write-something input {
+  width: 100%;
+  border-radius: 25px;
+  border: 1px solid #bfbfbf;
+  padding: 5px;
+}
+
+.middle-panel .write-something img {
+  height: 50px;
+  width: 50px;
+}
+.choose-from {
+  display: flex;
+  justify-content: space-evenly;
+}
+.choose-from > p {
+  padding: 15px;
+  /* just adding the border-radius if the user hover over each reactions  */
+  border-radius: 8px;
+}
+.choose-from > p:hover {
+  background-color: #bfbfbf;
+}
+/* end of the post section div */
+
+/* the styling of each posts */
+.posts {
+  background-color: white;
+  padding: 5px 5px 0 5px;
+  border-radius: 10px;
+}
+.posts > .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts > .heading > .logo {
+  display: flex;
+  gap: 3px;
+}
+.posts > .heading > .logo > img {
+  height: 60px;
+  width: 60px;
+}
+.posts > .heading > .actions {
+  display: flex;
+  gap: 5px;
+  padding: 0 10px 0 10px;
+}
+.posts > .heading > .actions > p {
+  color: blue;
+  padding: 0 8px 0 8px;
+  height: max-content;
+  border-radius: 10px;
+}
+.posts > .heading > .actions > p:hover {
+  background-color: #bfbfbf;
+}
+.posts > .body {
+  margin-top: 20px;
+}
+.posts > .body > .text > p {
+  padding-bottom: 10px;
+}
+.posts > .body img {
+  width: 100%;
+}
+.posts > .reactions > .reach {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.posts > .reactions > .add-reaction {
+  padding: 0px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.posts > .reactions > .add-reaction span {
+  color: grey;
+  padding: 10px 5px;
+}
+.posts > .reactions > .add-reaction span:hover {
+  background-color: #bfbfbf;
+}
+/* end of styling of posts div */
+/* for the drop down profile info when the user clicks on me on the navbar */
+.profile-info {
+  /* used z-index to make the div stack over other divs */
+  z-index: 1;
+  background-color: white;
+  height: max-content;
+  width: max-content;
+  position: absolute;
+  /* using transform property to make the popup center for large devices*/
+  transform: translate(40vw, 0vh);
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  /* display: flex;
+  flex-direction: column;
+  align-self: center; */
+}
+.profile-info > .top > .heading {
+  margin-bottom: 5px;
+}
+.profile-info > .top > .heading > img {
+  height: 50px;
+  width: 50px;
+}
+.profile-info > .top > span {
+  border: 2px solid rgb(28, 96, 241);
+  display: inline-block;
+  width: 100%;
+  padding: 6px;
+  border-radius: 25px;
+  color: #bfbfbf;
+}
+.profile-info > .top > span:hover {
+  background-color: #bfbfbf;
+  color: black;
+}
+.profile-info .account {
+  padding: 6px;
+  border-bottom: 1px solid #bfbfbf;
+}
+.profile-info .manage {
+  padding: 6px;
+}
+
+/* the below classes are used just for responsiveness */
+.hidden {
+  display: none !important;
+  transition: all 0s;
+}
+.search-smallScreen {
+  width: 86%;
+}
+
+/* for responsiveness */
+
+/* to make the search bar as exact as linkedin for small screen devices*/
+/* media queries */
+/* for nav bar */
+/* this is the new syntax and concise way of writing media queries */
+/* this does not work for IE browser */
+/* previously we used to write (max-width:value in px) or min-width:value in px */
+/* refer to  mdn-docs */
+
+@media (width<=1026px) {
+  /* in this media query i am setting breakpoints for the devices whose pixels are ranging between */
+  /* 1026px and less */
+  /* .search {
+    width: 25%;
+  } */
+
+  .search > input {
+    background-color: white;
+  }
+  /* .navigation-menu {
+    flex-basis: 70%;
+  }  */
+}
+
+@media (width<=1200px) {
+  .search > .fa-magnifying-glass {
+    left: 125px;
+  }
+  .navigation-menu span {
+    font-size: 40%;
+  }
+  .nav a {
+    font-size: 0.3em;
+  }
+}
+
+@media (width <= 1023px) {
+  .navigation-menu {
+    flex-basis: 80%;
+  }
+  .search > .fa-magnifying-glass {
+    font-size: 50%;
+    position: absolute;
+  }
+}
+
+@media (width<=853px) {
+  .navigation-menu > div > span {
+    display: none;
+  }
+}
+
+@media (width<=750px) {
+  .nav a {
+    display: none;
+  }
+}
+
+@media (width<=550px) {
+  .search > .fa-magnifying-glass {
+    left: 110px;
+  }
+}
+@media (width<=480px) {
+  .search > .fa-magnifying-glass {
+    left: 80px;
+  }
+}
+
+@media (width<=361px) {
+  .search > .fa-magnifying-glass {
+    left: 75px;
+  }
+}
+
+@media (width<=800px) {
+  .right-panel,
+  .left-panel {
+    display: none !important;
+  }
+
+  .middle-panel {
+    width: 80% !important;
+    /* margin:0 auto */
+    margin: 0 auto 0 auto;
+  }
+}

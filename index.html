@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedIn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- main navbar -->
+    <div class="nav">
+      <!-- Divided Navbar into sections using div -->
+      <!-- First Div  Contains LinkedIn Logo and the search input field-->
+      <div data-id="search" class="search">
+        <i class="fa-brands fa-linkedin"></i>
+        <i data-id="search-btn" class="fa-solid fa-magnifying-glass"></i>
+        <!-- i have used here data-id here to select this element through JS -->
+        <input
+          data-id="search-input-field"
+          type="search"
+          placeholder="Search"
+        />
+      </div>
+      <!-- Second Div Contains the navigation menu Like Home...... -->
+      <div data-id="navigation-menu" class="navigation-menu">
+        <div class="home">
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </div>
+        <div class="my-network">
+          <i class="fa-solid fa-people-group"></i>
+          <span> My Network </span>
+        </div>
+        <div class="jobs">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Jobs</span>
+        </div>
+        <div class="messaging">
+          <i class="fa-solid fa-message"></i>
+          <span>Messaging</span>
+        </div>
+        <div class="notifications">
+          <i class="fa-solid fa-bell"></i>
+          <span> Notifications </span>
+        </div>
+        <!-- i have used here data-id here to select this element through JS -->
+        <!-- So when the user clicks on 'Me'  the profile settings popup -->
+        <div data-id="profile" class="profile">
+          <i class="fa-solid fa-user"></i>
+          <span>Me <i class="fa-solid fa-caret-down"></i> </span>
+        </div>
+      </div>
+      <!-- This is the last link Which is outside of the both the divs-->
+      <a data-id="link" href="#">Try premium for free</a>
+    </div>
+    <!-- Main body Where all the contains goes -->
+    <!-- I have divided the Main Body into three divs -->
+    <!--  Left,middle,Right-->
+    <div class="main-body">
+      <!-- Left Panel -->
+      <!-- Divided left panel into sections -->
+      <div class="left-panel">
+        <!-- Divided the left panel into two divs -->
+        <!-- first div contains the user info -->
+        <!-- Like the add a photo and welcome,User -->
+        <!-- Also included that camera image -->
+        <!-- Second Div contains the Recent Activities -->
+        <div class="user-info">
+          <!-- Divided the UserInfo into two divs -->
+          <div class="top-box">
+            <!-- this div contains the image camera  -->
+            <div class="top-portion">
+              <img src="images/camera.png" alt="" />
+              <!-- <i class="fa-solid fa-camera"></i> -->
+            </div>
+            <!-- Div contains the text like welcome,shoaeeb -->
+            <div class="bottom-portion">
+              <h2>Welcome, Shoaeeb</h2>
+              <a href="#">Add a photo</a>
+            </div>
+          </div>
+          <!-- Second  div this contains like the text Connection 1 ...My Items -->
+          <div class="bottom-box">
+            <div class="connections">
+              <p><span>Connection</span><span style="color: blue">1</span></p>
+              <p>Grow Your Network</p>
+            </div>
+            <div class="exclusive">
+              <p>Access exclusive tools & insights</p>
+              <p>
+                <i
+                  style="color: rgb(234, 234, 152)"
+                  class="fa-solid fa-square"
+                ></i>
+                <span>Try Premium for free</span>
+              </p>
+            </div>
+            <div class="items">
+              <p><i class="fa-solid fa-bookmark"></i> <span>My Items</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- This contains the Recent Activity -->
+        <div class="recent-activity">
+          <p class="recent-text">Recent</p>
+          <p class="recent">
+            <i class="fa-solid fa-hashtag"></i> <span class="india">India</span>
+          </p>
+          <p class="links"><a href="#">Groups</a></p>
+          <p class="links">
+            <a href="#">Events</a
+            ><i style="padding-right: 5px" class="fa-solid fa-plus"></i>
+          </p>
+          <p class="links"><a href="#">Followed Hastags</a></p>
+          <p class="recent">
+            <i class="fa-solid fa-hashtag"></i> <span class="india">India</span>
+          </p>
+          <p class="see-all">
+            <i style="visibility: hidden" class="fa-solid fa-hashtag"></i>
+            <span>see all</span>
+          </p>
+
+          <div class="discover-more">
+            <p>Discover More</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Panel -->
+      <div class="middle-panel">
+        <!-- This div contains the element to Start a post -->
+        <div class="post">
+          <!-- This div contains the input field to write something and the profile image -->
+          <div class="write-something">
+            <img src="images/default-profile-image.jpg" alt="profile-image" />
+            <input type="text" placeholder="Start a post" />
+          </div>
+          <!-- This div provides the user which type of events they want to post -->
+          <!-- like photo, video ...etc  -->
+          <div class="choose-from">
+            <p>
+              <i style="color: #378fe9" class="fa-solid fa-image"></i> Photo
+            </p>
+            <p>
+              <i style="color: #5f9b41" class="fa-brands fa-youtube"></i> Video
+            </p>
+            <p>
+              <i style="color: #a872e8" class="fa-solid fa-calendar-days"></i>
+              Events
+            </p>
+            <p>
+              <i style="color: #e16745" class="fa-solid fa-newspaper"></i> Write
+              Article
+            </p>
+          </div>
+        </div>
+
+        <!-- This Divs are the actual post. -->
+        <!-- Divided each Posts divs into three divs -->
+        <!-- first div contains the logo, and the organization/user name and the follow button -->
+        <!--  second div contains the actual content of the post like text and the image-->
+        <!-- the third div contains the reactions button -> like,comment -->
+        <div class="posts">
+          <div class="heading">
+            <div class="logo">
+              <img
+                src="images/firstpostlogo.jpeg"
+                alt="G/PGloabalization Partners"
+              />
+              <div class="info">
+                <h4>G-P/Globalization Partners</h4>
+                <p>211,464 followers</p>
+                <p>Promoted</p>
+              </div>
+            </div>
+            <div class="actions">
+              <p>+ Follow</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="body">
+            <div class="text">
+              <p>
+                G-P's Well-established remote work environment equips us with
+                right tools to seamlessly collaborate with teams worldwide while
+                offering great flexibility. Even for people in leadership
+                positions like me, the level of technical deep dive in
+                solutioning offers a tremendous learning experience."--
+                <span style="color: blue">Pretit Chandra</span>
+                ,Director of DevOps,G-P
+              </p>
+
+              <p>
+                Join a <span style="color: blue">#Culture</span> that promotes
+                <span style="color: blue">#Flexibility</span>,
+                <span style="color: blue">#Innovation</span> and the freedom to
+                create the <span style="color: blue">#FutureOfWork</span>
+              </p>
+
+              <p><span style="color: blue">#OppurtunityMadePossible</span></p>
+            </div>
+            <div class="img">
+              <img src="images/firstpost.jpeg" alt="G-P" />
+            </div>
+          </div>
+          <div class="reactions">
+            <div class="reach">
+              <span>
+                <i style="color: blue" class="fa-solid fa-thumbs-up"></i>
+                <i style="color: red" class="fa-solid fa-heart"></i
+                ><span> 144</span>
+              </span>
+              <span>3 comments , 5 reposts</span>
+            </div>
+            <div class="add-reaction">
+              <span> <i class="fa-solid fa-thumbs-up"></i> Like </span>
+              <span><i class="fa-solid fa-comment"></i> Comment</span>
+              <span><i class="fa-solid fa-share"></i> Share</span>
+              <span><i class="fa-solid fa-paper-plane"></i> Send</span>
+            </div>
+          </div>
+        </div>
+        <!-- This is another post -->
+        <div class="posts">
+          <div class="heading">
+            <div class="logo">
+              <img src="images/thirdpostlogojpeg.jpeg" alt="PaySafe" />
+              <div class="info">
+                <h4>PaySafe</h4>
+                <p>211,464 followers</p>
+                <p>Promoted</p>
+              </div>
+            </div>
+            <div class="actions">
+              <p>+ Follow</p>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+          <div class="body">
+            <div class="text">
+              <p>
+                If you want to grow beyond the core of early crypto adopters you
+                need a strong partner who knows the world of fiat.This is where
+                the PaySaf comes into play. We know the payments word inside
+                out.
+              </p>
+
+              <p>
+                Happy to share what we have learned in 20+ years in the industry
+                with you. Book a meeting at TOKEN2049 now.
+              </p>
+            </div>
+            <div class="img">
+              <img src="images/thirdpost.jpeg" alt="PaySafe" />
+            </div>
+          </div>
+          <div class="reactions">
+            <div class="reach">
+              <span>
+                <i style="color: blue" class="fa-solid fa-thumbs-up"></i>
+                <i style="color: red" class="fa-solid fa-heart"></i
+                ><span> 24</span>
+              </span>
+              <span>3 comments , 5 reposts</span>
+            </div>
+            <div class="add-reaction">
+              <span> <i class="fa-solid fa-thumbs-up"></i> Like </span>
+              <span><i class="fa-solid fa-comment"></i> Comment</span>
+              <span><i class="fa-solid fa-share"></i> Share</span>
+              <span><i class="fa-solid fa-paper-plane"></i> Send</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is Right Panel -->
+      <div class="right-panel">
+        <!-- This div contains the linked news  -->
+        <div class="linkedin-news">
+          <div class="heading">
+            <h3>LinkedIn News</h3>
+            <i class="fa-solid fa-info"></i>
+          </div>
+          <div class="news">
+            <div class="box">
+              <h4>India makes historic Moon landing</h4>
+              <p>Top news 108 readers</p>
+            </div>
+            <div class="box">
+              <h4>SmartWatch Brands dial down prices</h4>
+              <p>2d ago 974 readers</p>
+            </div>
+            <div class="box">
+              <h4>Non-tech firms eye AI edge</h4>
+              <p>23h ago 376 readers</p>
+            </div>
+            <div class="box">
+              <h4>Evolving skillsets for CEOs</h4>
+              <p>13h ago 132 readers</p>
+            </div>
+            <div class="box">
+              <h4>Evolving skillsets for CEOs</h4>
+              <p>13h ago 132 readers</p>
+            </div>
+          </div>
+          <div class="show-more">
+            <p>Show More <i class="fa-solid fa-angle-down"></i></p>
+          </div>
+        </div>
+        <!-- This div contains the section Add to your feed -->
+        <div class="profile-suggestions">
+          <div class="heading">
+            <h3>Add To Your Feed</h3>
+            <i class="fa-solid fa-info"></i>
+          </div>
+          <div class="suggestions">
+            <div class="suggestion">
+              <i class="fa-brands fa-linkedin"></i>
+              <div class="actions">
+                <p>LinkedIn</p>
+                <p class="follow">Follow +</p>
+              </div>
+            </div>
+            <div class="suggestion">
+              <i class="fa-brands fa-facebook"></i>
+              <div class="actions">
+                <p>Facebook</p>
+                <p class="follow">Follow +</p>
+              </div>
+            </div>
+            <div class="suggestion">
+              <i class="fa-brands fa-twitter"></i>
+              <div class="actions">
+                <p>Twitter</p>
+                <p class="follow">Follow +</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- This is the popup which appears when the user clicks in ME on the navbar section -->
+      <!-- I have actually used JS to implement this function -->
+      <div data-id="profile-info" class="profile-info hidden">
+        <p data-id="close">
+          <span style="border: 1px solid grey; padding: 2px; border-radius: 50%"
+            >X</span
+          >
+          Close
+        </p>
+        <div class="top">
+          <div class="heading">
+            <img src="images/default-profile-image.jpg" alt="" />
+            <h4>Shoaeeb Osman</h4>
+          </div>
+          <span>View Profile</span>
+        </div>
+        <div class="account">
+          <h4>Account</h4>
+          <p>
+            <i style="color: rgb(234, 234, 152)" class="fa-solid fa-square"></i>
+            <span>Try Premium for free</span>
+          </p>
+          <p>Setting & Privacy</p>
+          <p>Help</p>
+          <p>Language</p>
+        </div>
+        <div class="manage">
+          <p>Post & Activity</p>
+          <p>Job Posting & Account</p>
+          <p>Sign Out</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/4fa3142f6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
